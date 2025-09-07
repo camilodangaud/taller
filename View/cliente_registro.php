@@ -7,9 +7,12 @@
 </head>
 <body>
     <h2>Registro de Usuario</h2>
-    <form method="POST" action="">
+    <form method="POST" action="../Controller/usuarios/registrar_usuario.php">
         <label>Nombre:</label><br>
         <input type="text" name="nombre" required><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" name="correo" required><br><br>
 
         <label>Contraseña:</label><br>
         <input type="password" name="contrasena" required><br><br>
