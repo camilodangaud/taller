@@ -26,7 +26,8 @@
 
         <button type="submit">Registrar</button>
     </form>
-
-    <p><?php echo $mensaje; ?></p>
+    <div>
+        <a href="../View/cliente_login.php">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+    </div>
 </body>
 </html>

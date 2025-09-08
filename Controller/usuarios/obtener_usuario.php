@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['contrasena'] = $usuario->getContraseña();
         $_SESSION['tipo']   = $usuario->getTipo();
 
-        header("Location: ../../View/panel_principal.php"); 
+        header("Location: ../../View/panel_principal_docente_usuario.php"); 
         exit;
     } else {
         $_SESSION['error'] = "❌ Correo o contraseña incorrectos";
