@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario span {
+    font-weight: bold;
+}
+
+.usuario button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.usuario button:hover {
+    background: #c0392b;
+}
+
+main {
+    padding: 20px;
+}
+
+.acciones button {
+    margin: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #3b82f6;
+    color: white;
+}
+.acciones button:hover {
+    background: #1d4ed8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-out;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.modal-contenido button {
+    margin: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmarCerrar {
+    background: #e74c3c;
+    color: white;
+}
+#cancelarCerrar {
+    background: #95a5a6;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+}
