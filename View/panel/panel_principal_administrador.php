@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario']) || $_SESSION['tipo'] !== 'administrador') {
-    header("Location: ../View/cliente_login.php"); 
+    header("Location: ../registro/cliente_login.php"); 
     exit();
 }
 $usuario = $_SESSION['usuario']; 
@@ -13,7 +13,7 @@ $tipo_usuario = $_SESSION['tipo'];
 <head>
     <meta charset="UTF-8">
     <title>Panel Principal - Administrador</title>
-    <link rel="stylesheet" href="../CSS/usuario/usuario_estilos.css">
+    <link rel="stylesheet" href="../../CSS/usuario/usuario_estilos.css">
 </head>
 <body>
 
@@ -30,7 +30,6 @@ $tipo_usuario = $_SESSION['tipo'];
     <p>Selecciona una acción:</p>
 
     <div class="acciones">
-        <button id="abrirModalRegistrarLibro">➕ Registrar Libro</button>
         <button id="abrirModalGestionarLibros">📑 Gestionar Libros</button>
         <button id="abrirModalUsuarios">👥 Ver Usuarios</button>
         <button id="abrirModalReservas">📖 Ver Reservas</button>
@@ -38,25 +37,11 @@ $tipo_usuario = $_SESSION['tipo'];
     </div>
 </main>
 
-<div id="modalRegistrarLibro" class="modal">
-  <div class="modal-contenido">
-    <span class="cerrar">&times;</span>
-    <h3>Registrar Nuevo Libro</h3>
-    <form action="../Controller/libros/registrar_libro.php" method="POST">
-        <input type="text" name="titulo" placeholder="Título" required><br>
-        <input type="text" name="autor" placeholder="Autor" required><br>
-        <input type="text" name="editorial" placeholder="Editorial"><br>
-        <button type="submit">Guardar</button>
-        <button type="button" class="cancelar">Cancelar</button>
-    </form>
-  </div>
-</div>
-
 <div id="modalGestionarLibros" class="modal">
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
     <p>¿Quieres ir al panel de gestión de libros?</p>
-    <button onclick="location.href='../Model/crud/libro.php'">Sí</button>
+    <button onclick="location.href='../admin/pagina_libro.php'">Sí</button>
     <button class="cancelar">Cancelar</button>
   </div>
 </div>
@@ -96,6 +81,7 @@ $tipo_usuario = $_SESSION['tipo'];
     <button id="cancelarCerrar">Cancelar</button>
   </div>
 </div>
-<script src="../JS/ventanas/administrador.js"></script>
+
+<script src="../../JS/ventanas/administrador.js"></script>
 </body>
 </html>

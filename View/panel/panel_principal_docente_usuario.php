@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario'])|| $_SESSION['tipo'] !== 'docente' && $_SESSION['tipo'] !== 'estudiante'  ) {
-    header("Location: ../View/cliente_login.php"); 
+    header("Location: ../registro/cliente_login.php"); 
     exit();
 }
 $usuario = $_SESSION['usuario']; 
@@ -13,7 +13,7 @@ $tipo_usuario = $_SESSION['tipo'];
 <head>
     <meta charset="UTF-8">
     <title>Panel Principal - Usuario</title>
-    <link rel="stylesheet" href="../CSS/usuario/usuario_estilos.css">
+    <link rel="stylesheet" href="../../CSS/usuario/usuario_estilos.css">
 </head>
 <body>
 
@@ -70,6 +70,6 @@ $tipo_usuario = $_SESSION['tipo'];
     <button id="cancelarCerrar">Cancelar</button>
   </div>
 </div>
-<script src="../JS/ventanas/acciones.js"></script>
+<script src="../../JS/ventanas/acciones.js"></script>
 </body>
 </html>

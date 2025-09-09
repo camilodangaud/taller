@@ -19,17 +19,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['tipo']       = $usuario->getTipo();
 
         if ($usuario->getTipo() === 'administrador') {
-            header("Location: ../../View/panel_principal_administrador.php");
+            header("Location: ../../View/panel/panel_principal_administrador.php");
         } elseif ($usuario->getTipo() === 'docente' || $usuario->getTipo() === 'estudiante') {
-            header("Location: ../../View/panel_principal_docente_estudiante.php");
+            header("Location: ../../View/panel/panel_principal_docente_estudiante.php");
         } else {
             $_SESSION['error'] = "⚠️ Tipo de usuario no válido";
-            header("Location: ../../View/cliente_login.php");
+            header("Location: ../../View/registro/cliente_login.php");
         }
         exit;
     } else {
         $_SESSION['error'] = "❌ Correo o contraseña incorrectos";
-        header("Location: ../../View/cliente_login.php");
+        header("Location: ../../View/registro/cliente_login.php");
         exit;
     }
 }

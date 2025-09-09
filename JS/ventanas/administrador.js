@@ -21,7 +21,6 @@ function configurarModal(botonAbrirId, modalId) {
     });
 }
 
-configurarModal("abrirModalRegistrarLibro", "modalRegistrarLibro");
 configurarModal("abrirModalGestionarLibros", "modalGestionarLibros");
 configurarModal("abrirModalUsuarios", "modalUsuarios");
 configurarModal("abrirModalReservas", "modalReservas");

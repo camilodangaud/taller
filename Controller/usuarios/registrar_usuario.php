@@ -18,6 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mensaje = "Error al registrar usuario ❌";
     }
 
-    header("Location: ../../view/cliente_login.php?mensaje=" . urlencode($mensaje));
+    header("Location: ../../view/registro/cliente_login.php?mensaje=" . urlencode($mensaje));
     exit;
 }
