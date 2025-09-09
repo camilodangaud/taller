@@ -13,12 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $usuario = $crud->loginUsuario($correo, $contrasena);
 
     if ($usuario !== null) {
-        $_SESSION['usuario'] = $usuario->getNombre();
-        $_SESSION['correo'] = $usuario->getCorreo();
+        $_SESSION['usuario']    = $usuario->getNombre();
+        $_SESSION['correo']     = $usuario->getCorreo();
         $_SESSION['contrasena'] = $usuario->getContraseña();
-        $_SESSION['tipo']   = $usuario->getTipo();
+        $_SESSION['tipo']       = $usuario->getTipo();
 
-        header("Location: ../../View/panel_principal_docente_usuario.php"); 
+        if ($usuario->getTipo() === 'administrador') {
+            header("Location: ../../View/panel_principal_administrador.php");
+        } elseif ($usuario->getTipo() === 'docente' || $usuario->getTipo() === 'estudiante') {
+            header("Location: ../../View/panel_principal_docente_estudiante.php");
+        } else {
+            $_SESSION['error'] = "⚠️ Tipo de usuario no válido";
+            header("Location: ../../View/cliente_login.php");
+        }
         exit;
     } else {
         $_SESSION['error'] = "❌ Correo o contraseña incorrectos";

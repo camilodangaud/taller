@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario'])|| $_SESSION['tipo'] !== 'docente' && $_SESSION['tipo'] !== 'estudiante'  ) {
     header("Location: ../View/cliente_login.php"); 
     exit();
 }
