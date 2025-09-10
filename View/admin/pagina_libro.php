@@ -88,6 +88,10 @@ $resultado = $conexion->query($query);
 	</table>
 </div>
 
+    <div>
+        <a href="../panel/panel_principal_administrador.php">regresar</a>
+    </div>
+
 <script src="../../JS/tablas/form_handler.js"></script> 
 </body>
 </html>

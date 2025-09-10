@@ -25,5 +25,5 @@ configurarModal("abrirModalPrestamos", "modalPrestamos");
 configurarModal("abrirModalCerrar", "modalCerrar");
 
 document.getElementById("confirmarCerrar").onclick = function () {
-    window.location.href = "../Controller/usuarios/cerrar_sesion.php";
+    window.location.href = "/taller_analisis/Controller/usuarios/cerrar_sesion.php";
 };

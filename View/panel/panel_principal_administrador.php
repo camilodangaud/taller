@@ -50,7 +50,7 @@ $tipo_usuario = $_SESSION['tipo'];
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
     <p>¿Quieres ver los usuarios registrados?</p>
-    <button onclick="location.href='../Model/crud/usuario.php'">Sí</button>
+    <button onclick="location.href='../admin/usuarios_ver.php'">👥 Ver Usuarios</button>
     <button class="cancelar">Cancelar</button>
   </div>
 </div>
@@ -59,7 +59,7 @@ $tipo_usuario = $_SESSION['tipo'];
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
     <p>¿Quieres ver todas las reservas?</p>
-    <button onclick="location.href='../Model/crud/reserva.php'">Sí</button>
+    <button onclick="location.href='../admin/reservas_ver.php'">📖 Ver Reservas</button>
     <button class="cancelar">Cancelar</button>
   </div>
 </div>
@@ -68,7 +68,7 @@ $tipo_usuario = $_SESSION['tipo'];
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
     <p>¿Quieres ver todos los préstamos?</p>
-    <button onclick="location.href='../Model/crud/prestamo.php'">Sí</button>
+    <button onclick="location.href='../admin/prestamos_ver.php'">📚 Ver Préstamos</button>
     <button class="cancelar">Cancelar</button>
   </div>
 </div>
