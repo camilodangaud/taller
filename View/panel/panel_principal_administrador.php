@@ -77,7 +77,7 @@ $tipo_usuario = $_SESSION['tipo'];
   <div class="modal-contenido">
     <span class="cerrar">&times;</span>
     <p>¿Estás seguro que quieres cerrar sesión?</p>
-    <button id="confirmarCerrar">Sí, salir</button>
+    <a href="/taller_analisis/Controller/usuarios/cerrar_sesion.php" class="btn-salir">Sí, salir</a>
     <button id="cancelarCerrar">Cancelar</button>
   </div>
 </div>
