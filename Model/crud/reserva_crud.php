@@ -20,19 +20,7 @@ class reserva_crud {
             $reserva->getFechaReserva(),
             $reserva->getActiva()
         );
-
-        if ($stmt->execute()) {
-            $update = $this->conexion->prepare(
-                "UPDATE libros SET disponibilidad = 0 WHERE id_libro = ?"
-            );
-            $id_libro = $reserva->getIdLibro();
-            $update->bind_param("i", $id_libro);
-            $update->execute();
-
-            return true;
-        } else {
-            return false;
-        }
+        return $stmt->execute();
     }
 }
 ?>
