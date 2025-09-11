@@ -34,5 +34,25 @@ class prestamo_crud {
             return false;
         }
     }
+     public function devolver_prestamo($id_prestamo, $id_libro) {
+        $stmt = $this->conexion->prepare(
+            "UPDATE prestamos 
+             SET devuelto = 1, fecha_devolucion = NOW() 
+             WHERE id_prestamo = ?"
+        );
+        $stmt->bind_param("i", $id_prestamo);
+
+        if ($stmt->execute()) {
+            $update = $this->conexion->prepare(
+                "UPDATE libros SET disponibilidad = 1 WHERE id_libro = ?"
+            );
+            $update->bind_param("i", $id_libro);
+            $update->execute();
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 ?>

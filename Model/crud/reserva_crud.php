@@ -22,5 +22,13 @@ class reserva_crud {
         );
         return $stmt->execute();
     }
+
+    public function cancelar_reserva($id_reserva, $id_usuario) {
+        $stmt = $this->conexion->prepare(
+            "UPDATE reservas SET activa = 0 WHERE id_reserva = ? AND id_usuario = ?"
+        );
+        $stmt->bind_param("ii", $id_reserva, $id_usuario);
+        return $stmt->execute();
+    }
 }
 ?>
